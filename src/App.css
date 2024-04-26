@@ -11,10 +11,12 @@
   justify-content: space-between;
   position: relative;
   user-select: none;
-  height: 100vh;
-  width: 100vw;
-  max-height: 5.81in;
-  max-width: 2.82in;
+  max-height: 100vh;
+  max-width: 100vw;
+  min-height: 5.81in;
+  min-width: 2.82in;
+  height: 5.81in;
+  width: 2.82in;
 }
 .cameraNotch {
   position: absolute;
