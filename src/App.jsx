@@ -200,11 +200,21 @@ function App() {
         </div>
 
         <div className="notification-section">
-          <ul>
-            <li className="text-danger">Notification 1</li>
-            <li>Notification 2</li>
-            {/* Add more notifications here */}
-          </ul>
+          <div className="screen-header px-3">
+            <span style={{ fontSize: 12 }}>10:00</span>
+            <div>
+              <span>
+                <GiNetworkBars />
+              </span>
+              <span>
+                <MdOutlineNetworkWifi />
+              </span>
+              <span>
+                <FaBatteryFull />
+              </span>
+            </div>
+          </div>
+          <p>More Items</p>
         </div>
       </main>
       <img src="/images/camera.webp" alt="" className="cameraNotch" />

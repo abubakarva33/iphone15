@@ -78,19 +78,17 @@
 .notification-section {
   position: absolute;
   top: 0;
-  align-self: center;
   width: 91%;
   padding: 0px;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #ced4da;
+  background-color: #443b3b;
   transform: translateY(-100%);
   transition: transform 0.5s ease;
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin: auto;
   border-radius: 30px;
   overflow: hidden;
-  height: 334px;
   overflow: hidden !important;
 }
 
@@ -108,22 +106,3 @@
   display: flex;
   justify-content: center;
 }
-
-/* @media only screen and (max-height: 710px) {
-  .appImage {
-    height: 3rem;
-    width: 3rem;
-  }
-  .screenWallpaper {
-    border-radius: 50px;
-  }
-}
-@media only screen and (max-height: 610px) {
-  .appImage {
-    height: 2.5rem;
-    width: 2.5rem;
-  }
-  .screenWallpaper {
-    border-radius: 45px;
-  }
-} */
