@@ -110,9 +110,11 @@ const speedApps = [
 function App() {
   const [showNotifications, setShowNotifications] = useState(false);
   let startY = 0;
+
   const handleTouchStart = (e) => {
     startY = e.touches[0].clientY;
   };
+
   const handleTouchEnd = (e) => {
     const endY = e.changedTouches[0].clientY;
     const deltaY = endY - startY;
@@ -124,11 +126,35 @@ function App() {
       setShowNotifications(false);
     }
   };
+
+  const handleMouseDown = (e) => {
+    startY = e.clientY;
+    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseup", handleMouseUp);
+  };
+
+  const handleMouseMove = (e) => {
+    const endY = e.clientY;
+    const deltaY = endY - startY;
+    const minSwipe = 50;
+
+    if (deltaY > minSwipe) {
+      setShowNotifications(true);
+    } else if (deltaY < -minSwipe) {
+      setShowNotifications(false);
+    }
+  };
+
+  const handleMouseUp = () => {
+    window.removeEventListener("mousemove", handleMouseMove);
+    window.removeEventListener("mouseup", handleMouseUp);
+  };
   return (
     <div className="home-screen">
       <main
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
+        onMouseDown={handleMouseDown}
         className={
           showNotifications ? "show-notifications notificationSection" : "notificationSection"
         }
