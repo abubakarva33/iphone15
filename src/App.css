@@ -26,12 +26,6 @@
   background-image: url(/images/wallpaper.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 91%;
-  height: 99%;
-  overflow: hidden !important;
-  border-radius: 35px;
-  padding: 5px;
-  margin: 8px;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -42,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2px 5px 10px;
+  padding: 5px 10px 5px 15px;
   width: 100%;
 }
 .screen-header > div span {
@@ -69,16 +63,15 @@
 }
 .speedApps {
   background-color: rgb(95 140 135 / 64%);
-  width: 98%;
   padding: 8px 15px;
   border-radius: 42px;
-  margin: auto 12px 5px 12px;
+  margin: auto 12px 10px 12px;
 }
 
 .notification-section {
   position: absolute;
   top: 0;
-  width: 91%;
+  width: 100%;
   padding: 0px;
   background-color: #443b3b;
   transform: translateY(-100%);
@@ -90,6 +83,7 @@
   border-radius: 30px;
   overflow: hidden;
   overflow: hidden !important;
+  min-height: 300px;
 }
 
 .show-notifications .screenWallpaper {
@@ -98,11 +92,13 @@
 
 .show-notifications .notification-section {
   transform: translateY(0%);
-  top: 10px;
 }
 .notificationSection {
   height: 98%;
   position: relative;
   display: flex;
   justify-content: center;
+  margin: 9px 12px;
+  border-radius: 35px;
+  overflow: hidden;
 }
