@@ -1,0 +1,104 @@
+.home-screen {
+  padding: 10px;
+  background-image: url(/images/frame.webp);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  color: white !important;
+  margin: auto;
+  overflow: hidden !important;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  user-select: none;
+}
+.cameraNotch {
+  position: absolute;
+  top: 22px;
+  height: 40px;
+  width: 120px;
+}
+.screenWallpaper {
+  background-image: url(/images/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 96%;
+  height: 100%;
+  overflow: hidden !important;
+  border-radius: 55px;
+  padding: 5px;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: filter 0.3s ease;
+}
+.screen-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px 20px 18px;
+  width: 100%;
+}
+.screen-header > div span {
+  padding: 7px;
+}
+.appImage {
+  height: 4rem;
+  width: 4rem;
+}
+.appItemEach {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+.appLists {
+  margin-top: 3vh;
+  padding: 0 10px;
+}
+.speedApps {
+  background-color: rgba(131, 129, 126, 0.726);
+  width: 96%;
+  padding: 12px 17px;
+  border-radius: 42px;
+  margin: auto 15px 10px 15px;
+}
+
+.notification-section {
+  position: absolute;
+  top: 10px;
+  align-self: center;
+  width: 95%;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ced4da;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  border-radius: 37px;
+  overflow: hidden;
+  height: 334px;
+  border-top-right-radius: 44px;
+  border-top-left-radius: 50px;
+  overflow: hidden !important;
+}
+
+.show-notifications .screenWallpaper {
+  filter: blur(5px);
+}
+
+.show-notifications .notification-section {
+  transform: translateY(0%);
+}
+.notificationSection {
+  height: 98%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
