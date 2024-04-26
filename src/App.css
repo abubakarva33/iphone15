@@ -1,5 +1,7 @@
+body {
+  padding: 10px 0 !important;
+}
 .home-screen {
-  padding: 10px;
   background-image: url(/images/frame.webp);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -23,7 +25,7 @@
   background-image: url(/images/wallpaper.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 96%;
+  width: 92%;
   height: 100%;
   overflow: hidden !important;
   border-radius: 55px;

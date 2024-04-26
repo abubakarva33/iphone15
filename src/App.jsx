@@ -115,7 +115,7 @@ function App() {
     function resizeCard() {
       const screenHeight = window.innerHeight;
       const maxHeight = 967;
-      const ratio = 430 / maxHeight;
+      const ratio = 480 / maxHeight;
 
       const newHeight = Math.min(screenHeight, maxHeight);
       const newWidth = newHeight * ratio;
@@ -159,7 +159,9 @@ function App() {
       <main
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        className={showNotifications ? "show-notifications notificationSection" : "notificationSection"}
+        className={
+          showNotifications ? "show-notifications notificationSection" : "notificationSection"
+        }
       >
         <div className="screenWallpaper">
           <div className="screen-header">
@@ -209,7 +211,6 @@ function App() {
           </ul>
         </div>
       </main>
-
       <img src="/images/camera.webp" alt="" className="cameraNotch" />
       {/* <div className="screenWallpaper">
         <div className="screen-header">
