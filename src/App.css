@@ -11,21 +11,25 @@
   justify-content: space-between;
   position: relative;
   user-select: none;
+  height: 100vh;
+  width: 100vw;
+  max-height: 5.81in;
+  max-width: 2.82in;
 }
 .cameraNotch {
   position: absolute;
-  top: 22px;
-  height: 40px;
-  width: 120px;
+  top: 15px;
+  height: 25px;
+  width: 85px;
 }
 .screenWallpaper {
   background-image: url(/images/wallpaper.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  width: 92%;
-  height: 100%;
+  width: 91%;
+  height: 99%;
   overflow: hidden !important;
-  border-radius: 55px;
+  border-radius: 35px;
   padding: 5px;
   margin: 8px;
   display: flex;
@@ -38,15 +42,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 6px 8px 20px 18px;
+  padding: 0 2px 5px 10px;
   width: 100%;
 }
 .screen-header > div span {
-  padding: 7px;
+  padding: 3px;
+  font-size: 12px;
 }
 .appImage {
-  height: 4rem;
-  width: 4rem;
+  height: 35px;
+  width: 35px;
+}
+.appTitle {
+  font-size: 12px;
 }
 .appItemEach {
   display: flex;
@@ -60,19 +68,19 @@
   padding: 0 10px;
 }
 .speedApps {
-  background-color: rgba(131, 129, 126, 0.726);
-  width: 96%;
-  padding: 12px 17px;
+  background-color: rgb(95 140 135 / 64%);
+  width: 98%;
+  padding: 8px 15px;
   border-radius: 42px;
-  margin: auto 15px 10px 15px;
+  margin: auto 12px 5px 12px;
 }
 
 .notification-section {
   position: absolute;
-  top: 10px;
+  top: 0;
   align-self: center;
-  width: 95%;
-  padding: 20px;
+  width: 91%;
+  padding: 0px;
   background-color: #f8f9fa;
   border-bottom: 1px solid #ced4da;
   transform: translateY(-100%);
@@ -80,20 +88,19 @@
   display: flex;
   align-items: center;
   margin: auto;
-  border-radius: 37px;
+  border-radius: 30px;
   overflow: hidden;
   height: 334px;
-  border-top-right-radius: 44px;
-  border-top-left-radius: 50px;
   overflow: hidden !important;
 }
 
 .show-notifications .screenWallpaper {
-  filter: blur(5px);
+  filter: blur(2px);
 }
 
 .show-notifications .notification-section {
   transform: translateY(0%);
+  top: 10px;
 }
 .notificationSection {
   height: 98%;
@@ -102,7 +109,7 @@
   justify-content: center;
 }
 
-@media only screen and (max-height: 710px) {
+/* @media only screen and (max-height: 710px) {
   .appImage {
     height: 3rem;
     width: 3rem;
@@ -119,4 +126,4 @@
   .screenWallpaper {
     border-radius: 45px;
   }
-}
+} */

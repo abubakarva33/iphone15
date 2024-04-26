@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FaBatteryFull } from "react-icons/fa";
 import { GiNetworkBars } from "react-icons/gi";
 import { MdOutlineNetworkWifi } from "react-icons/md";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 const appData = [
   {
     title: "messenger",
@@ -108,54 +108,24 @@ const speedApps = [
 ];
 
 function App() {
-  const [cardHeight, setCardHeight] = useState(0);
-  const [cardWidth, setCardWidth] = useState(0);
-
-  useEffect(() => {
-    function resizeCard() {
-      const screenHeight = window.innerHeight;
-      const maxHeight = 967;
-      const ratio = 480 / maxHeight;
-
-      const newHeight = Math.min(screenHeight, maxHeight);
-      const newWidth = newHeight * ratio;
-
-      setCardHeight(newHeight);
-      setCardWidth(newWidth);
-    }
-
-    resizeCard();
-    window.addEventListener("resize", resizeCard);
-
-    return () => {
-      window.removeEventListener("resize", resizeCard);
-    };
-  }, []);
-
-  // working//
   const [showNotifications, setShowNotifications] = useState(false);
   let startY = 0;
-
   const handleTouchStart = (e) => {
     startY = e.touches[0].clientY;
   };
-
   const handleTouchEnd = (e) => {
     const endY = e.changedTouches[0].clientY;
     const deltaY = endY - startY;
-    const minSwipe = 50; // minimum swipe distance in pixels
+    const minSwipe = 50;
 
     if (deltaY > minSwipe) {
-      // Swipe down
       setShowNotifications(true);
     } else if (deltaY < -minSwipe) {
-      // Swipe up
       setShowNotifications(false);
     }
   };
-  // working//
   return (
-    <div className="home-screen" style={{ width: cardWidth, height: cardHeight }}>
+    <div className="home-screen">
       <main
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
@@ -165,7 +135,7 @@ function App() {
       >
         <div className="screenWallpaper">
           <div className="screen-header">
-            <span>10:00</span>
+            <span style={{ fontSize: 12 }}>10:00</span>
             <div>
               <span>
                 <GiNetworkBars />
@@ -184,7 +154,7 @@ function App() {
                 <Col key={ind}>
                   <div className="appItemEach">
                     <img src={`/images/${item?.image}.png`} alt="" className="appImage" />
-                    <p className="text-capitalize">{item?.title}</p>
+                    <p className="text-capitalize appTitle">{item?.title}</p>
                   </div>
                 </Col>
               ))}
